@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>PREP CLUB Stratégie complète</title>
+  <meta name="description" content="Marketing Studio PREP CLUB : stratégie de communication, calendrier éditorial sur 12 mois, contenus prêts à publier, campagnes, e-mailing, influence, publicité, SEO et suivi.">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/marketing.css?v=40">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%235C6B3C'/%3E%3Ctext x='32' y='42' font-family='Georgia' font-size='26' fill='%23FBF8F1' text-anchor='middle'%3EPC%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/demo-bar.css?v=40">
+</head>
+<body>
+  <div class="demobar" role="note" aria-label="Projet étudiant INSEEC, démo sans vente réelle"><span class="demobar__label">Projet étudiant INSEEC, démo sans vente réelle</span><nav class="demobar__nav" aria-label="Les 4 espaces du projet"><a href="index.html"><b>1</b>Vente</a><a href="admin.html#/crm"><b>2</b>CRM</a><a href="strategie.html"><b>3</b>Stratégie</a><a href="communication.html" aria-current="page"><b>4</b>Communication</a></nav></div>
+  <div class="studio">
+    <aside class="side" id="side" aria-label="Modules du Marketing Studio">
+      <a class="side__brand" href="#dashboard"><span class="logo">PREP<i>CLUB</i></span><span class="side__sub">Marketing Studio</span></a>
+      <nav id="sideNav" class="stack" style="gap:18px"></nav>
+      <div class="side__foot">
+        <a href="marketing-studio.html">← Version simple</a><a href="index.html">Retour au site</a>
+        <span>Your week, prepared.</span>
+        <button class="btn btn--sm btn--ghost" id="resetBtn" type="button">Réinitialiser le studio</button>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="top">
+        <button class="burger" id="burger" aria-label="Ouvrir le menu des modules"><span></span><span></span><span></span></button>
+        <div class="top__crumb"><span>Back-office</span><span aria-hidden="true">/</span><strong id="crumb">Marketing Dashboard</strong></div>
+        <div class="top__right"><span class="phase" id="phase"></span></div>
+      </header>
+      <main class="page" id="page" tabindex="-1"></main>
+    </div>
+  </div>
+
+  <div class="modal" id="modal" hidden role="dialog" aria-modal="true">
+    <div class="modal__bg"></div>
+    <div class="modal__panel" id="modalPanel"></div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/data.js?v=40"></script>
+  <script src="js/mkt-data.js?v=40"></script>
+  <script src="js/mkt-engine.js?v=40"></script>
+  <script src="js/mkt-app.js?v=40"></script>
+</body>
+</html>

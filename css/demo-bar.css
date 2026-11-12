@@ -1,0 +1,30 @@
+/* =========================================================
+   PREP CLUB — Bandeau « démo » obligatoire + navigation
+   entre les 4 espaces du projet (Vente, CRM, Stratégie, Communication).
+   Présent sur toutes les pages.
+   ========================================================= */
+:root { --demobar-h: 40px; }
+.demobar { position: relative; z-index: 400; height: var(--demobar-h); display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 0 16px; background: #E9A23B; color: #1C2412; font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 13px; line-height: 1.2; }
+.demobar__label { display: flex; align-items: center; gap: 8px; font-weight: 800; white-space: nowrap; }
+.demobar__label::before { content: 'DÉMO'; padding: 3px 7px; border-radius: 6px; background: #1C2412; color: #E9A23B; font-size: 10px; letter-spacing: .12em; }
+.demobar__nav { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+.demobar__nav::-webkit-scrollbar { display: none; }
+.demobar__nav a { display: inline-flex; align-items: center; gap: 6px; padding: 6px 11px; border-radius: 999px; color: #1C2412; text-decoration: none; font-weight: 700; white-space: nowrap; transition: background .2s; }
+.demobar__nav a:hover, .demobar__nav a:focus-visible { background: rgba(28, 36, 18, .12); }
+.demobar__nav a[aria-current="page"] { background: #1C2412; color: #FBF7EF; }
+.demobar__nav b { font-size: 10px; opacity: .65; }
+/* Back-office / CRM : barre fixe au-dessus de la barre latérale */
+.adm .demobar { position: fixed; top: 0; left: 0; right: 0; }
+body.adm { padding-top: var(--demobar-h); }
+.adm .side { top: var(--demobar-h) !important; }
+.adm .top { top: var(--demobar-h); }
+.adm .auth { top: var(--demobar-h); }
+@media (max-width: 720px) {
+  :root { --demobar-h: 64px; }
+  .demobar { flex-direction: column; align-items: stretch; justify-content: center; gap: 4px; padding: 6px 10px; }
+  .demobar__label { justify-content: center; font-size: 12px; }
+  .demobar__nav { justify-content: space-between; }
+  .demobar__nav a { padding: 5px 9px; font-size: 12px; }
+  .demobar__nav b { display: none; }
+}
+@media print { .demobar { position: static; background: none; border-bottom: 1px solid #000; } }

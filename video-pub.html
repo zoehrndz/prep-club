@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Le film PREP CLUB</title>
+  <meta name="description" content="La vidéo publicitaire principale de PREP CLUB, en motion design : aperçu, textes modifiables, export MP4 en 16:9 et 9:16.">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%235C6B3C'/%3E%3Ctext x='32' y='42' font-family='Georgia' font-size='26' fill='%23FBF8F1' text-anchor='middle'%3EPC%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --ivory: #FBF7EF; --cream: #F3ECDD; --white: #fff; --olive: #56663A; --olive-dark: #2F3A1F; --olive-deep: #222A16; --olive-soft: #E5E9D2;
+      --sand: #E6D3AE; --charcoal: #1F1E1B; --saffron: #E9A23B; --tomato: #D4623B; --muted: #6B6255; --line: #E6DCC9;
+      --serif: 'Fraunces', Georgia, serif; --sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --ease: cubic-bezier(.16, 1, .3, 1);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: var(--sans); background: var(--ivory); color: var(--charcoal); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; }
+    .wrap { max-width: 1320px; margin: 0 auto; padding: 0 16px 60px; }
+    .top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 0; }
+    .logo { font-family: var(--serif); font-weight: 600; font-size: 1.45rem; text-decoration: none; letter-spacing: -.01em; }
+    .logo i { color: var(--olive); font-weight: 500; margin-left: 4px; }
+    .top nav { display: flex; gap: 18px; font-size: .9rem; font-weight: 600; flex-wrap: wrap; justify-content: flex-end; }
+    .top nav a { text-decoration: none; color: var(--muted); }
+    .top nav a:hover { color: var(--olive); }
+    .head { padding: 18px 0 26px; max-width: 760px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: .72rem; letter-spacing: .2em; font-weight: 800; color: var(--olive); }
+    .eyebrow::before { content: ''; width: 22px; height: 2px; border-radius: 2px; background: currentColor; }
+    h1 { font-family: var(--serif); font-weight: 420; font-size: clamp(2.3rem, 5vw, 3.8rem); line-height: 1; letter-spacing: -.03em; margin: 12px 0 14px; }
+    h1 em { color: var(--olive); font-weight: 380; }
+    .lead { color: var(--muted); font-size: 1.05rem; line-height: 1.55; margin: 0; }
+
+    .layout { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 28px; align-items: start; }
+    .layout.is-tall { grid-template-columns: minmax(0, 420px) minmax(0, 1fr); }
+    .layout.is-tall .side { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-content: start; }
+    .layout.is-tall .side .panel--scenes { grid-row: span 2; }
+
+    .stage { position: relative; border-radius: 22px; overflow: hidden; background: var(--olive-deep); box-shadow: 0 30px 70px -30px rgba(47, 58, 31, .45); }
+    .stage canvas { display: block; width: 100%; height: auto; cursor: pointer; }
+    .big-play { position: absolute; left: 50%; top: 50%; translate: -50% -50%; width: 92px; height: 92px; border-radius: 50%; border: 0; background: var(--saffron); color: var(--olive-deep); display: grid; place-items: center; cursor: pointer; box-shadow: 0 16px 40px -10px rgba(0,0,0,.45); transition: scale .4s var(--ease), opacity .3s; }
+    .big-play:hover { scale: 1.06; }
+    .big-play svg { width: 36px; height: 36px; margin-left: 5px; fill: currentColor; }
+    .stage.is-playing .big-play { opacity: 0; pointer-events: none; scale: .8; }
+    .loading { position: absolute; inset: 0; display: grid; place-items: center; color: var(--sand); font-weight: 700; background: var(--olive-deep); }
+    .loading[hidden] { display: none; }
+
+    .controls { display: flex; align-items: center; gap: 12px; margin-top: 14px; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1.5px solid var(--line); background: var(--white); color: var(--charcoal); font: 700 .9rem var(--sans); padding: 10px 16px; border-radius: 999px; cursor: pointer; transition: background .2s, border-color .2s, color .2s; }
+    .btn:hover { border-color: var(--olive); }
+    .btn svg { width: 18px; height: 18px; fill: currentColor; }
+    .btn--icon { width: 44px; height: 44px; padding: 0; }
+    .btn--olive { background: var(--olive); border-color: var(--olive); color: var(--ivory); }
+    .btn--olive:hover { background: var(--olive-dark); border-color: var(--olive-dark); }
+    .btn--block { width: 100%; padding: 14px 18px; font-size: .98rem; }
+    .btn[disabled] { opacity: .55; cursor: wait; }
+    .time { font: 700 .88rem var(--sans); font-variant-numeric: tabular-nums; color: var(--muted); min-width: 92px; }
+    .seg { display: inline-flex; background: var(--cream); border-radius: 999px; padding: 4px; margin-left: auto; }
+    .seg button { border: 0; background: transparent; font: 700 .85rem var(--sans); padding: 8px 14px; border-radius: 999px; cursor: pointer; color: var(--muted); }
+    .seg button[aria-pressed="true"] { background: var(--white); color: var(--charcoal); box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+
+    .track { position: relative; margin-top: 16px; }
+    .chapters { display: flex; gap: 3px; height: 10px; }
+    .chapters button { flex: var(--d) 1 0; border: 0; padding: 0; border-radius: 5px; background: var(--line); cursor: pointer; position: relative; overflow: hidden; }
+    .chapters button span { position: absolute; inset: 0; width: var(--p, 0%); background: var(--olive); }
+    .chapters button:hover { background: var(--sand); }
+    .scrub { position: absolute; inset: -8px 0; width: 100%; opacity: 0; cursor: pointer; margin: 0; }
+    .chap-name { margin-top: 10px; font-size: .86rem; color: var(--muted); font-weight: 600; min-height: 1.3em; }
+    .chap-name b { color: var(--charcoal); }
+
+    .panel { background: var(--white); border: 1px solid var(--line); border-radius: 20px; padding: 20px; margin-bottom: 16px; }
+    .layout.is-tall .panel { margin-bottom: 0; }
+    .panel h2 { font-family: var(--serif); font-weight: 450; font-size: 1.35rem; letter-spacing: -.02em; margin: 0 0 4px; }
+    .panel p.small { margin: 0 0 14px; color: var(--muted); font-size: .86rem; line-height: 1.5; }
+    .field { display: grid; gap: 6px; margin-bottom: 12px; }
+    .field span { font-size: .78rem; font-weight: 800; color: var(--muted); }
+    .field input { font: 600 .95rem var(--sans); padding: 11px 13px; border: 1.5px solid var(--line); border-radius: 12px; background: var(--ivory); color: var(--charcoal); width: 100%; }
+    .field input:focus { outline: 0; border-color: var(--olive); box-shadow: 0 0 0 4px rgba(86, 102, 58, .14); }
+    .check { display: flex; align-items: center; gap: 10px; font-size: .9rem; font-weight: 600; margin: 4px 0 14px; }
+    .check input { accent-color: var(--olive); width: 18px; height: 18px; }
+    .progress { height: 8px; border-radius: 4px; background: var(--cream); overflow: hidden; margin-top: 12px; }
+    .progress[hidden] { display: none; }
+    .progress i { display: block; height: 100%; width: 0; background: var(--saffron); transition: width .2s linear; }
+    .note { font-size: .82rem; color: var(--muted); line-height: 1.5; margin: 12px 0 0; }
+    .note.ok { color: var(--olive); font-weight: 700; }
+    .note.err { color: var(--tomato); font-weight: 700; }
+    .row { display: flex; gap: 10px; margin-top: 10px; }
+    .row .btn { flex: 1; }
+
+    .scenes { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; counter-reset: sc; }
+    .scenes button { width: 100%; text-align: left; display: grid; grid-template-columns: 44px 1fr; gap: 2px 10px; border: 0; background: transparent; padding: 9px 10px; border-radius: 12px; cursor: pointer; font: inherit; color: inherit; }
+    .scenes button:hover { background: var(--ivory); }
+    .scenes button[aria-current="true"] { background: var(--olive-soft); }
+    .scenes .tc { grid-row: span 2; font: 700 .78rem var(--sans); color: var(--olive); font-variant-numeric: tabular-nums; padding-top: 2px; }
+    .scenes strong { font-size: .92rem; }
+    .scenes small { color: var(--muted); font-size: .8rem; line-height: 1.4; }
+
+    @media (max-width: 980px) {
+      .layout, .layout.is-tall { grid-template-columns: 1fr; }
+      .layout.is-tall .stage-col { max-width: 440px; margin: 0 auto; width: 100%; }
+      .layout.is-tall .side { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .seg { margin-left: 0; width: 100%; }
+      .seg button { flex: 1; }
+      .big-play { width: 70px; height: 70px; }
+    }
+  </style>
+  <link rel="stylesheet" href="css/demo-bar.css?v=40">
+</head>
+<body>
+  <div class="demobar" role="note" aria-label="Projet étudiant INSEEC, démo sans vente réelle"><span class="demobar__label">Projet étudiant INSEEC, démo sans vente réelle</span><nav class="demobar__nav" aria-label="Les 4 espaces du projet"><a href="index.html"><b>1</b>Vente</a><a href="admin.html#/crm"><b>2</b>CRM</a><a href="strategie.html"><b>3</b>Stratégie</a><a href="communication.html" aria-current="page"><b>4</b>Communication</a></nav></div>
+  <div class="wrap">
+    <header class="top">
+      <a class="logo" href="index.html">PREP<i>CLUB</i></a>
+      <nav aria-label="Liens">
+        <a href="index.html">← Le site</a>
+        <a href="marketing-studio.html">Marketing Studio</a>
+      </nav>
+    </header>
+
+    <section class="head">
+      <span class="eyebrow">VIDÉO PUBLICITAIRE PRINCIPALE</span>
+      <h1>Le film <em>PREP CLUB</em></h1>
+      <p class="lead">50 secondes de motion design pour présenter le site et le service : l’accroche, la marque, la carte, la box, le planning, les producteurs, la livraison. Musique incluse, calée sur le rythme. Lancez l’aperçu, ajustez les textes, puis téléchargez la vidéo.</p>
+    </section>
+
+    <div class="layout" id="layout">
+      <div class="stage-col">
+        <div class="stage" id="stage">
+          <canvas id="cv" width="1280" height="720" aria-label="Aperçu du film PREP CLUB"></canvas>
+          <button class="big-play" id="bigPlay" aria-label="Lire le film"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></svg></button>
+          <div class="loading" id="loading">Chargement des photos…</div>
+        </div>
+        <div class="track">
+          <div class="chapters" id="chapters"></div>
+          <input class="scrub" id="scrub" type="range" min="0" max="1000" value="0" aria-label="Position dans le film">
+        </div>
+        <div class="chap-name" id="chapName"></div>
+        <div class="controls">
+          <button class="btn btn--icon btn--olive" id="play" aria-label="Lire"><svg viewBox="0 0 24 24" id="playIcon"><path d="M7 4.5v15l13-7.5z"/></svg></button>
+          <button class="btn btn--icon" id="restart" aria-label="Revenir au début"><svg viewBox="0 0 24 24"><path d="M6 5h2v14H6zM20 5v14L9 12z"/></svg></button>
+          <button class="btn btn--icon" id="sound" aria-label="Couper le son" aria-pressed="true"><svg viewBox="0 0 24 24" id="soundIcon"></svg></button>
+          <span class="time" id="time">0:00 / 0:50</span>
+          <div class="seg" role="group" aria-label="Format">
+            <button data-fmt="wide" aria-pressed="true">16:9 · YouTube, site</button>
+            <button data-fmt="tall" aria-pressed="false">9:16 · Reels, TikTok</button>
+          </div>
+        </div>
+      </div>
+
+      <aside class="side">
+        <section class="panel">
+          <h2>Télécharger</h2>
+          <p class="small" id="fmtLabel"></p>
+          <label class="check"><input type="checkbox" id="withSound" checked> Avec la musique</label>
+          <button class="btn btn--olive btn--block" id="exportVideo"><svg viewBox="0 0 24 24"><path d="M11 4h2v9.2l3.6-3.6 1.4 1.4-6 6-6-6 1.4-1.4 3.6 3.6zM5 18h14v2H5z"/></svg> Télécharger la vidéo</button>
+          <div class="progress" id="progress" hidden><i></i></div>
+          <div class="row"><button class="btn" id="exportPng">Image de couverture</button></div>
+          <p class="note" id="exportNote">L’enregistrement se fait en temps réel (50 s). Gardez cet onglet ouvert et visible jusqu’à la fin.</p>
+        </section>
+
+        <section class="panel">
+          <h2>Textes</h2>
+          <p class="small">Modifiés en direct dans l’aperçu. Entourez un mot d’astérisques pour le mettre en italique.</p>
+          <form id="fields" autocomplete="off"></form>
+          <button class="btn" id="resetFields" type="button">Textes d’origine</button>
+        </section>
+
+        <section class="panel panel--scenes">
+          <h2>Les scènes</h2>
+          <p class="small">Cliquez pour aller directement à une scène.</p>
+          <ol class="scenes" id="scenes"></ol>
+        </section>
+      </aside>
+    </div>
+  </div>
+
+  <script src="js/data.js?v=40"></script>
+  <script src="js/film.js?v=40"></script>
+  <script>
+  (() => {
+    const $ = (s) => document.querySelector(s);
+    const cv = $('#cv');
+    const PREVIEW = { wide: [1280, 720], tall: [720, 1280] };
+    const STORE = 'prepclub:film:v1';
+    let fmt = 'wide';
+    const fmtTime = (t) => `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, '0')}`;
+    const SND_ON = '<path d="M4 9h4l5-4v14l-5-4H4zM16 8.5a5 5 0 0 1 0 7l-1.4-1.4a3 3 0 0 0 0-4.2zM18.4 6a8.5 8.5 0 0 1 0 12L17 16.6a6.5 6.5 0 0 0 0-9.2z"/>';
+    const SND_OFF = '<path d="M4 9h4l5-4v14l-5-4H4zM16.3 9.3l1.4-1.4 2.1 2.1 2.1-2.1 1.4 1.4-2.1 2.1 2.1 2.1-1.4 1.4-2.1-2.1-2.1 2.1-1.4-1.4 2.1-2.1z"/>';
+    const PLAY = '<path d="M7 4.5v15l13-7.5z"/>', PAUSE = '<path d="M6 4h4v16H6zM14 4h4v16h-4z"/>';
+    $('#soundIcon').innerHTML = SND_ON;
+
+    // Chapitres et liste des scènes
+    $('#chapters').innerHTML = FILM.S.map((s, i) => `<button type="button" data-i="${i}" style="--d:${s.dur}" aria-label="${s.name}" title="${s.name}"><span></span></button>`).join('');
+    $('#scenes').innerHTML = FILM.S.map((s, i) => `<li><button type="button" data-i="${i}"><span class="tc">${fmtTime(s.start)}</span><strong>${s.name}</strong><small>${s.note}</small></button></li>`).join('');
+    const chapBars = [...document.querySelectorAll('#chapters button span')];
+    const sceneBtns = [...document.querySelectorAll('#scenes button')];
+    let lastScene = -1;
+
+    const player = FILM.Player(cv, {
+      t: 11.4,
+      onTime(t) {
+        $('#time').textContent = `${fmtTime(t)} / ${fmtTime(FILM.DUR)}`;
+        $('#scrub').value = Math.round((t / FILM.DUR) * 1000);
+        FILM.S.forEach((s, i) => { chapBars[i].style.setProperty('--p', `${Math.round(Math.min(1, Math.max(0, (t - s.start) / s.dur)) * 100)}%`); });
+        const cur = FILM.S.findIndex((s) => t >= s.start && t < s.start + s.dur);
+        const i = cur < 0 ? FILM.S.length - 1 : cur;
+        if (i !== lastScene) {
+          lastScene = i;
+          sceneBtns.forEach((b, j) => b.setAttribute('aria-current', String(j === i)));
+          $('#chapName').innerHTML = `Scène ${i + 1}/${FILM.S.length} · <b>${FILM.S[i].name}</b>`;
+        }
+      },
+      onState(on) {
+        $('#stage').classList.toggle('is-playing', on);
+        $('#playIcon').innerHTML = on ? PAUSE : PLAY;
+        $('#play').setAttribute('aria-label', on ? 'Pause' : 'Lire');
+      },
+    });
+
+    // Textes
+    let saved = {};
+    try { saved = JSON.parse(localStorage.getItem(STORE) || '{}') || {}; } catch (e) { saved = {}; }
+    const data = Object.assign(FILM.defaults(), saved);
+    const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+    function renderFields() {
+      $('#fields').innerHTML = FILM.FIELDS.map(([k, l]) => `<label class="field"><span>${l}</span><input name="${k}" value="${esc(data[k])}"></label>`).join('');
+    }
+    renderFields();
+    player.setData(data);
+    $('#fields').addEventListener('input', (e) => {
+      data[e.target.name] = e.target.value;
+      player.setData(data);
+      try { localStorage.setItem(STORE, JSON.stringify(data)); } catch (err) { /* stockage indisponible */ }
+    });
+    $('#resetFields').addEventListener('click', () => {
+      Object.assign(data, FILM.defaults()); renderFields(); player.setData(data);
+      try { localStorage.removeItem(STORE); } catch (err) { /* */ }
+    });
+
+    // Lecture
+    $('#play').addEventListener('click', () => player.toggle());
+    $('#bigPlay').addEventListener('click', () => { if (player.st.t > 11 && player.st.t < 12) player.seek(0); player.play(); });
+    cv.addEventListener('click', () => player.toggle());
+    $('#restart').addEventListener('click', () => player.seek(0));
+    $('#scrub').addEventListener('input', (e) => player.seek((e.target.value / 1000) * FILM.DUR));
+    document.addEventListener('click', (e) => {
+      const b = e.target.closest('#chapters button, #scenes button');
+      if (b) player.seek(FILM.S[+b.dataset.i].start + 0.01);
+    });
+    $('#sound').addEventListener('click', () => {
+      const on = $('#sound').getAttribute('aria-pressed') !== 'true';
+      $('#sound').setAttribute('aria-pressed', String(on));
+      $('#sound').setAttribute('aria-label', on ? 'Couper le son' : 'Activer le son');
+      $('#soundIcon').innerHTML = on ? SND_ON : SND_OFF;
+      player.setSound(on);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.target.closest('input, textarea')) return;
+      if (e.code === 'Space') { e.preventDefault(); player.toggle(); }
+      if (e.key === 'ArrowRight') player.seek(player.st.t + 2.4);
+      if (e.key === 'ArrowLeft') player.seek(player.st.t - 2.4);
+    });
+
+    // Format
+    function setFmt(f) {
+      fmt = f;
+      document.querySelectorAll('[data-fmt]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.fmt === f)));
+      $('#layout').classList.toggle('is-tall', f === 'tall');
+      $('#fmtLabel').textContent = `Format ${FILM.FORMATS[f].label} — ${FILM.FORMATS[f].w} × ${FILM.FORMATS[f].h} px, ${Math.round(FILM.DUR)} s.`;
+      player.resize(...PREVIEW[f]);
+    }
+    document.querySelectorAll('[data-fmt]').forEach((b) => b.addEventListener('click', () => setFmt(b.dataset.fmt)));
+    setFmt('wide');
+
+    // Exports
+    const note = $('#exportNote');
+    $('#exportVideo').addEventListener('click', async () => {
+      const btn = $('#exportVideo');
+      player.pause();
+      btn.disabled = true; $('#progress').hidden = false;
+      note.className = 'note'; note.textContent = 'Enregistrement en cours… gardez cet onglet visible.';
+      const bar = $('#progress i');
+      const res = await FILM.exportVideo(fmt, data, `prepclub-film-${fmt === 'wide' ? '16x9' : '9x16'}`, (k) => { bar.style.width = `${Math.round(k * 100)}%`; }, $('#withSound').checked);
+      btn.disabled = false;
+      setTimeout(() => { $('#progress').hidden = true; bar.style.width = '0'; }, 1200);
+      if (res.ok) { note.className = 'note ok'; note.textContent = `Vidéo téléchargée (${res.ext.toUpperCase()}).${res.ext === 'webm' ? ' Ce navigateur n’exporte pas en MP4 : ouvrez la page dans Safari ou un Chrome récent pour un MP4.' : ''}`; }
+      else if (res.reason === 'busy') { note.className = 'note'; note.textContent = 'Un export est déjà en cours.'; }
+      else { note.className = 'note err'; note.textContent = 'L’export vidéo n’est pas disponible dans ce navigateur. Essayez Chrome, Edge ou Safari récent.'; }
+    });
+    $('#exportPng').addEventListener('click', async () => {
+      const ok = await FILM.exportImage(fmt, data, player.st.t, `prepclub-film-${fmt === 'wide' ? '16x9' : '9x16'}-couverture`);
+      note.className = ok ? 'note ok' : 'note err';
+      note.textContent = ok ? 'Image téléchargée : c’est l’image affichée dans l’aperçu.' : 'Image impossible à générer (photos bloquées ?).';
+    });
+
+    // Chargement
+    Promise.all([FILM.fontsReady(), FILM.preload()]).then(() => { $('#loading').hidden = true; player.draw(); player.st.onTime(player.st.t); });
+  })();
+  </script>
+</body>
+</html>
